@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <title>Giving 101</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:400,500,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.js"></script>
+    <script id="charity" type="x-handlebars-template">
+        <div class="charity-cell" data-number={{number}}>
+            <div class="logo-cell">
+                <img src="{{logo}}">
+            </div>
+        </div>
+        <div class="charity-card hide" data-number={{number}}>
+            <img src="{{logo}}">
+            <h3 class="charity-title">{{title}}</h3>
+            <div class="hover-content">
+                <p class="charity-intro">{{intro}}<p>
+                <a target="_blank" href="{{webLink}}" class="donate-btn">Lean More</a>
+                <a target="_blank" href="{{donateLink}}" class="donate-btn">Donate</a>
+            </div>
+        </div>
+    </script>
+</head>
+<body>
+    <!-- HERO -->
+    <div class="hero-panel">
+
+        <!-- <h1 class="site-logo">GIVING 101</h1>
+        <p class="hero-caption">A lesson on how to give better, from millenials to millenials</p> -->
+        <h2>You have the
+            <div class="slidingVertical">
+                <span>power</span>
+                <span>heart</span>
+                <span>time</span>
+
+            </div>
+            </br>to help someone in need.
+        </h2>
+        <div class="hero-content">
+            <h1 class="site-logo">GIVING 101</h1>
+            <p class="hero-caption">A guide on how to give better, from millenials to millenials</p>
+            <button class="get-started hvr-bubble-right">START HERE</button>
+        </div>
+    </div>
+
+    <!-- QUESIIONS -->
+
+
+        <div class="question-container">
+            <!-- PAGE NAV DOTS -->
+            <div class="page-dot">
+                <div class="dot-cell">
+                    <div class="dot"></div>
+
+                </div>
+                <div class="dot-cell">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+
+                </div>
+                <div class="dot-cell">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="dot-cell">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="dot-cell">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="dot-cell">
+                    <div class="line"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <form class="questions">
+                <div class="causes question-cell">
+                    <p class="question">Please select 4 - 5 causes you care about the most</p>
+                    <!-- <div class="keyline"></div> -->
+
+                    <div class="answers">
+                        <div class="options box-style">
+                        <input type="checkbox" id="environment" value="environment" name="causes">
+                        <label for="environment"><span></span>Environment</label>
+                        </div>
+
+                        <div class="options box-style">
+                        <input type="checkbox" id="education" value="education"  name="causes">
+                        <label for="education"><span></span>Education</label>
+                        </div>
+
+                        <div class="options box-style">
+                        <input type="checkbox" id="hunger" value="hunger" name="causes">
+                        <label for="hunger"><span></span>Hunger</label>
+                        </div>
+
+                        <div class="options box-style">
+                        <input type="checkbox" id="animalWelfare" value="animalWelfare" name="causes">
+                        <label for="animalWelfare"><span></span>Animal Welfare</label>
+                        </div>
+
+                        <div  class="options box-style">
+                        <input type="checkbox" id="sickChildren" value="sickChildren" name="causes">
+                        <label for="sickChildren"><span></span>Sick Children</label>
+                        </div>
+
+
+                        <div class="options box-style">
+                        <input type="checkbox" id="refugees" value="refugees" name="causes">
+                        <label for="refugees"><span></span>International Aid</label>
+                        </div>
+                    </div>
+
+                    <button class="causesButton nextButton">
+                        Next
+                    </button>
+                </div>
+
+                <div class="sizes question-cell">
+                    <p class="question">What would be the ideal size of the organization you'd like to give to?</p>
+                    <div class="keyline"></div>
+                    <div class="answers">
+                        <div class="options">
+                        <input type="radio" id="small" name="size" value="small">
+                        <label for="small">Small</label>
+                        </div>
+
+                        <div class="options">
+                        <input type="radio" id="medium" name="size" value="medium">
+                        <label for="medium">Medium</label>
+                        </div>
+
+                        <div class="options">
+                        <input type="radio" id="large" name="size" value="large">
+                        <label for="large">Large</label>
+                        </div>
+                    </div>
+
+                    <button class="sizeButton nextButton">
+                        Next
+                    </button>
+                </div>
+
+                <div class="age question-cell">
+                    <p class="question">What would be the ideal age of the organization you'd like to give to?</p>
+                    <div class="keyline"></div>
+                    <div class="answers">
+                        <div class="options">
+                            <input type="radio" id="new" name="age" value="new">
+                            <label for="new">new</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="mature" name="age" value="mature">
+                            <label for="mature">mature</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="established" name="age" value="established">
+                            <label for="established">established</label>
+                        </div>
+                    </div>
+
+                    <button class="ageButton nextButton">
+                        Next
+                    </button>
+                </div>
+
+
+                <div class="serviceAreas question-cell">
+                    <p class="question">What area do you want to give to?</p>
+                    <div class="keyline"></div>
+                    <div class="answers">
+                        <div class="options">
+                            <input type="radio" id="canada" value="canada"  name="serviceArea" >
+                            <label for="canada">Canada</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="international" value="international" name="serviceArea">
+                            <label for="international">International</label>
+                        </div>
+                    </div>
+                    <button class="serviceAreaButton nextButton">
+                        Next
+                    </button>
+                </div>
+
+
+
+                <div class="tax question-cell">
+                    <p class="question">Do you want a taxable contribution receipt?</p>
+                    <div class="keyline"></div>
+                    <div class="answers">
+                        <div class="options">
+                            <input type="radio" id="yes" name="tax" value="y">
+                            <label for="yes">Yes</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="no" name="tax" value="n">
+                            <label for="no">No</label>
+                        </div>
+                    </div>
+                    <button class="taxButton nextButton">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    <div class="wrapper">
+
+
+
+
+
+        <!-- FINAL RESULT POP UP -->
+        <div class="final-result hide">
+            <h2>Start making a difference here.</h2>
+        </div>
+        <!-- CHARITIES -->
+        <div class="arrow">
+            <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+                <title>Artboard Copy</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+                    <g id="Artboard-Copy" stroke-width="4" stroke="#FFFFFF">
+                        <polyline id="Line" points="2 14 25 32.690179 48 14"></polyline>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <section class="charities">
+        </section>
+
+        <!-- RESTART POP UP -->
+        <div class="no-charity">
+            <button class="refresh">
+                RESET
+            </button>
+        </div>
+
+    </div>
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- THIS IS OUR JS FILE -->
+    <script src="script.js"></script>
+
+
+</body>
+</html>
+
